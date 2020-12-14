@@ -1,10 +1,9 @@
-<meta charset="ISO-8859-1">
+<!-- <meta charset="ISO-8859-1">
 <!DOCTYPE html>
 <html>
 
 <head>
 	<title>Home</title>
-	<!-- <link rel="stylesheet" type="text/css" href="../static/styles.css"> -->
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
@@ -12,10 +11,10 @@
 	<header>
 		<div class="container">
 		<div id="brandname">
-			Natural language processing App with Flask
+			Application to predict the numerical rating for the game reviews in text format
 		</div>
 		<div>
-		<h2>Game rating prediction</h2>
+		<h2>Rating Predictor</h2>
 		</div>
 	</div>
 	</header>
@@ -24,7 +23,7 @@
 
 		<form action="/predictcall" method='POST'>
 			<center>
-			<p>Enter Your review Here</p>
+			<p>Please enter the review of the Game </p>
 		<!-- <input type="text" name="comment"/> -->
 		<!--<input type="text" name="message">-->
 		<textarea name="message" rows="4" cols="50"></textarea>
@@ -33,6 +32,70 @@
 		<input type="submit" class="btn-info" value="Predict">
 		<br><br>
 		<center><h4><p id="rating">Rating =  {{result}}</p></h4>
+	</center>
+	</form>
+		
+	</div>
+
+	
+	
+
+</body>
+</html>
+ -->
+<meta charset="ISO-8859-1">
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Home</title>
+
+	
+</head>
+<style>
+.button {
+  background-color: MediumSeaGreen; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+</style>
+
+<body style="background-color:lightblue; background-image: url('https://www.insidehook.com/wp-content/uploads/2020/03/Settlers-of-Catan-Tabletop-Simulator.jpg?fit=1200%2C800');">
+
+	<header style="background-color:MediumSeaGreen; padding:30px;">
+		<div class="container">
+		<div style="text-align:center; font-size:40px;">
+			Data Mining Term project
+		</div>
+		<div style="text-align:center; font-size:24px; float:left; padding:10px;">
+			Application to predict the numerical rating for the text Reviews
+		</div>
+		<div>
+		<h2 style="text-align:center; font-size:24px;"> Game Rating prediction</h2>
+		</div>
+	</div>
+	</header>
+	
+	<div class="ml-container">
+
+		<form action="/predictcall" method='POST'>
+			<center>
+			<p style="font-size:22px; color:#ffffff;">Enter Your review Here</p>
+
+		<textarea name="message" rows="4" cols="50"></textarea>
+		<br/><br>
+
+		<input type="submit" class="button" value="Predict Rating">
+		<br><br>
+		<center><h4 style="font-size:22px; color:#ffffff;"> Rating =  {{result}} </h4>
 	</center>
 	</form>
 		
